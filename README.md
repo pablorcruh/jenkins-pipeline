@@ -1,3 +1,4 @@
+[![Build Status](http://jenkins.ci.pablo-cruz.com/buildStatus/icon?job=pipeline-docker-maven)](http://jenkins.ci.pablo-cruz.com/job/pipeline-docker-maven/)
 # JENKINS PIPELINE
 
 ## DESCRIPTION
