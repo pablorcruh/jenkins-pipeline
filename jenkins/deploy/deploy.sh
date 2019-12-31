@@ -8,4 +8,4 @@ scp -i /opt/prod /tmp/.auth prod_user@167.172.125.154:/tmp/.auth
 
 scp -i /opt/prod jenkins/deploy/publish.sh prod_user@167.172.125.154:/tmp/publish
 
-ssh -i /opt/prod prod_user@167.172.125.154 "/tmp/publish"
+ssh -i /opt/prod prod_user@167.172.125.154 "/tmp/publish.sh"
