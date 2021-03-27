@@ -16,6 +16,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh  '''
+                    chown jenkins:jenkins $PWD/
                     chmod +x jenkins/test/testing.sh
                     ./jenkins/test/testing.sh mvn test
                     '''
