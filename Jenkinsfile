@@ -8,6 +8,7 @@ pipeline {
                 sh  '''
                     echo $(whoami)
                     chmod +x jenkins/build/mvn.sh
+                    chmod +x jenkins/build/build.sh
                     ls -la jenkins/build 
                     ./jenkins/build/mvn.sh mvn -B -DskipTests clean package
                     ./jenkins/build/build.sh 
