@@ -16,9 +16,9 @@ docker login -u pablorcruh -p $PASSWORD
 echo "**********************************************************"
 echo "**************** TAGGING DOCKER IMAGE  *******************"
 echo "**********************************************************"
-docker tag  $IMAGE:$BUILD_TAG pablorcruh/$IMAGE:$BUILD_TAG
+docker tag  $IMAGE:$BUILD_NUMBER pablorcruh/$IMAGE:$BUILD_NUMBER
 
 echo "**********************************************************"
 echo "****************     PUSHING IMAGE     *******************"
 echo "**********************************************************"
-docker push pablorcruh/$IMAGE:$BUILD_TAG
+docker push pablorcruh/$IMAGE:$BUILD_NUMBER
