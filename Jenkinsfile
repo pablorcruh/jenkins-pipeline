@@ -6,6 +6,9 @@ pipeline {
         stage('Build') {
             steps {
                 sh  '''
+                    chown jenkins:jenkins $PWD/
+                    echo $(whoami)
+                    ls -la jenkins/build 
                     ./jenkins/build/mvn.sh mvn -B -DskipTests clean package
                     ./jenkins/build/build.sh 
 
@@ -16,7 +19,6 @@ pipeline {
         stage('Test') {
             steps {
                 sh  '''
-                    chown jenkins:jenkins $PWD/
                     chmod +x jenkins/test/testing.sh
                     ./jenkins/test/testing.sh mvn test
                     '''
