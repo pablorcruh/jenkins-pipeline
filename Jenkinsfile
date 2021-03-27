@@ -16,6 +16,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh  '''
+                    chmod +x jenkins/test/testing.sh
                     ./jenkins/test/testing.sh mvn test
                     '''
             }
@@ -24,6 +25,7 @@ pipeline {
         stage('Push') {
             steps {
                 sh  '''
+                    chmod +x jenkins/push/push.sh 
                     ./jenkins/push/push.sh
                     '''
             }
@@ -32,6 +34,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh  '''
+                    chmod +x jenkins/deploy/deploy.sh 
                     ./jenkins/deploy/deploy.sh
                     '''
             }
