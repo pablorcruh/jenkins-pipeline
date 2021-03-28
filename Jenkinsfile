@@ -1,6 +1,10 @@
 pipeline {
     agent any
     
+    environment {
+        PASSWORD = credentials(docker-hub)
+    }
+
     stages {
 
         stage('Build') {
